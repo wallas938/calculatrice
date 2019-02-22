@@ -4,7 +4,8 @@
   "description": "calculatrice",
   "main": "main.js",
   "scripts": {
-    "watch": "webpack --watch",
+    "webpack-watch": "webpack --watch",
+    "scss-watch": "sass --watch src/main.scss dist/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

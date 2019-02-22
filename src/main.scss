@@ -1,0 +1,28 @@
+$black-border: 1px solid black;
+
+#my-app {
+    border: $black-border;
+    height: 100px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#block-boutons {
+    width: 40%;
+    text-align: center;
+    padding-top: 20px; 
+    #plus {
+        width: 80px;
+    }
+    #moin {
+        width: 80px;
+    }
+    #mutiplier {
+        width: 80px;
+    }
+    #diviser {
+        width: 80px;
+    }
+}
