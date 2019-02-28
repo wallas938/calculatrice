@@ -7,22 +7,25 @@
   justify-content: space-around;
 }
 
-#block-boutons {
-  width: 40%;
+#block-boutons-operators {
+  width: 100%;
   text-align: center;
   padding-top: 20px;
 }
-#block-boutons #plus {
+#block-boutons-operators #plus, #block-boutons-operators #moins, #block-boutons-operators #mutiplier, #block-boutons-operators #diviser, #block-boutons-operators #egale {
   width: 80px;
 }
-#block-boutons #moin {
-  width: 80px;
+
+#button-numbers {
+  width: 100%;
+  margin-top: 20px;
 }
-#block-boutons #mutiplier {
-  width: 80px;
-}
-#block-boutons #diviser {
-  width: 80px;
+#button-numbers td {
+  border: 1px solid black;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  background-color: #DDD;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,20 +9,25 @@ $black-border: 1px solid black;
     justify-content: space-around;
 }
 
-#block-boutons {
-    width: 40%;
+#block-boutons-operators {
+    width: 100%;
     text-align: center;
     padding-top: 20px; 
-    #plus {
+
+    #plus, #moins, #mutiplier, #diviser, #egale {
         width: 80px;
     }
-    #moin {
-        width: 80px;
-    }
-    #mutiplier {
-        width: 80px;
-    }
-    #diviser {
-        width: 80px;
+}
+
+#button-numbers {
+    width:100%;
+    margin-top: 20px;
+
+    td {
+        border: $black-border;
+        width: 100px;
+        height: 80px;
+        text-align: center;
+        background-color: #DDD;
     }
 }

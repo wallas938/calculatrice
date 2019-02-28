@@ -9,19 +9,41 @@
 </head>
 <body>
     <div id="my-app">
-        <label for="upper-dislayer">
-            Ecran du haut<input id="top-displayer" name="upper-dislayer" type="text" value="">
+        <label for="top-displayer">
+            Ecran du haut<input id="top-displayer" class="displayers" name="upper-dislayer" type="text" value="">
         </label>
-        <label for="lower-dislayer">
-            Ecran du bas<input id="bottom-displayer" name="lower-dislayer" type="text" value="">
+        <label for="bottom-displayer">
+            Ecran du bas<input id="bottom-displayer" class="displayers" name="lower-dislayer" type="text" value="">
         </label>
     </div>
-    <div id="block-boutons">
-        <input type="button" id="plus" value="+">
-        <input type="button" id="plus" value="-">
-        <input type="button" id="plus" value="*">
-        <input type="button" id="plus" value="/">
-    </div>
+    <table id="button-numbers">
+        <tr>
+            <td value="supp" id="supp">AC</td>
+            <td value="/" id="diviser" class="signe">/</td>
+            <td value="*" id="mutiplier" class="signe">*</td>
+            <td value="-" id="soustraire" class="signe">-</td>
+        </tr>
+        <tr>
+            <td value="7" id="sept" class="number">7</td>
+            <td value="8" id="huit" class="number">8</td>
+            <td value="9" id="neuf" class="number">9</td>
+            <td value="+" id="plus" class="signe">+</td>
+        </tr>
+        <tr>
+            <td value="4" id="quatre" class="number">4</td>
+            <td value="5" id="cinq" class="number">5</td>
+            <td value="6" id="six" class="number">6</td>
+            <td rowspan="3" class="signe">=</td>
+        </tr>
+        <tr>
+            <td value="1" id="un" class="number">1</td>
+            <td value="2" id="deux" class="number">2</td>
+            <td value="3" id="trois" class="number">3</td>
+        </tr>
+        <tr>
+            <td colspan="3" value="0" id="zero" class="number" value="0">0</td>
+        </tr>
+    </table>
     <script src="bundle.js"></script>
 </body>
 </html>
