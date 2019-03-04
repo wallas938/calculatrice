@@ -1,122 +1,181 @@
-import { isNumber } from "util";
+import { isNumber } from "util" 
 
-var ecrans = document.querySelectorAll('.displayers');
+var ecrans = document.querySelectorAll('.displayers') 
 
-var ecranDuBas = document.getElementById('bottom-displayer');
+var ecranDuBas = document.getElementById('bottom-displayer') 
 
-var ecranDuHaut = document.getElementById('top-displayer');
+var ecranDuHaut = document.getElementById('top-displayer') 
 
-var signes = document.querySelectorAll('.signe');
+var signes = document.querySelectorAll('.signe') 
 
-var numeros = document.querySelectorAll('.number');
+var numeros = document.querySelectorAll('.number') 
 
-var effacer = document.getElementById('supp');
+var effacer = document.getElementById('supp') 
 
-var donneeEcranDuBas = [];
+var donneeEcranDuHaut = [] 
 
-var donneeEcranDuHaut = [];
+var currentInput = [] 
 
 var resultats = []
 
-ecranDuBas.value = "";
+ecranDuBas.value = "" 
 
-ecranDuHaut.value = "";
+ecranDuHaut.value = "" 
 
 function calculate() {
-    let resultat = 0;
-    let finalTab = [...donneeEcranDuHaut];
+    let resultat = 0 
+    let finalTab = [...donneeEcranDuHaut] 
 
-    finalTab.pop(); // retirer le signe "="
+    finalTab.pop()  // retirer le signe "="
+
     console.log(finalTab)
-    for(let i = 0; i <= finalTab.length; i++){
-        
+
+    for(let i = 0;  i <= finalTab.length; i++){
+
             if(isNaN(finalTab[i])) {
-                continue;
+                continue 
                 
             }else {
                 switch (finalTab[i-1]) {
                     case '+':
-                        console.log('addition')
-                        resultat += parseInt(finalTab[i]);
-                        console.log(resultat)
-                        break;
+                        resultat += Number(finalTab[i]) 
+                        break 
                     case '-':
-                        console.log('soustraction')
-                        console.log(finalTab[i])
-                        resultat -= parseInt(finalTab[i]);
-                        break;
+                        resultat -= Number(finalTab[i]) 
+                        break 
                     case '*':
-                        console.log('multiplication')
-                        console.log(finalTab[i])
-                        resultat *= parseInt(finalTab[i]);
-                        break;
+                        resultat *= Number(finalTab[i]) 
+                        break 
                     case '÷':
-                        console.log('division')
-                        console.log(finalTab[i])
-                        resultat /= parseInt(finalTab[i]);
-                        break;
+                        resultat /= Number(finalTab[i]) 
+                        break 
                     default:
-                        resultat += parseInt(finalTab[i]);
-                        break;
+                        resultat += Number(finalTab[i]) 
+                        break 
                 }
             }
     }
-    return resultat;
+    return resultat 
 }
 
+/** Traitemement des nombres et des operateurs */
+function recupInput(input, signe) {
 
-function recupInput(input) {
-    if(isNaN(input)) {
-        if(input === "=") {
-            donneeEcranDuHaut.push(...donneeEcranDuBas,input);
-            let resultat = calculate();
-            resultats.push(resultat);
-            donneeEcranDuHaut.push(resultat);
-            ecranDuHaut.value = donneeEcranDuHaut.join('');
-            donneeEcranDuHaut = [resultat]
-            donneeEcranDuBas = []
-            ecranDuBas.value = resultat;
-            console.log(...donneeEcranDuHaut)
+    if(input && signe) {
+
+        if(signe === "=") {
+            //Pour le signe egale
+            
+            input = +input.join('')
+            donneeEcranDuHaut.push(input, signe)
+            let lastResultat = calculate()
+            resultats = [lastResultat]
+            donneeEcranDuHaut.push(lastResultat)
+            ecranDuHaut.value = donneeEcranDuHaut.join('')
+            donneeEcranDuHaut = [lastResultat]
+            ecranDuBas.value = lastResultat
+
         }else {
-            ecranDuBas.value = input;
-            donneeEcranDuHaut.push(...donneeEcranDuBas, input);
-            ecranDuHaut.value = donneeEcranDuHaut.join('');
-            console.log(...donneeEcranDuHaut)
-            donneeEcranDuBas = [];
+            // Pour tout autre signes 
+
+                let lastElement = donneeEcranDuHaut[donneeEcranDuHaut.length - 1] //Variable qui verifie si le dernier element de  
+                                                                                  //donneeEcranDuHaut est un operateur
+                
+                if(input.length === 0 && isNaN(lastElement)) {
+
+                    //console.log('input.length === 0 && isNaN(lastElement', lastElement)
+
+                    donneeEcranDuHaut.pop()
+
+                    donneeEcranDuHaut.push(signe)
+
+                    ecranDuHaut.value = signe;
+
+                }else if(input.length === 0) {
+
+                    //console.log('input.length === 0', lastElement)
+
+                    donneeEcranDuHaut.push(signe)
+                
+                }else {
+
+                    //console.log(lastElement, ' input length: ', input.length)
+
+                    //console.log(' input: ', input)
+
+                    //console.log('donnees ecran du haut: ', donneeEcranDuHaut);
+
+                    input = +input.join('')
+
+                    donneeEcranDuHaut.push(input, signe)
+
+                }
+
+                ecranDuHaut.value = donneeEcranDuHaut.join('')
+            
         }
-        
     }else {
-        donneeEcranDuBas.push(input);
-        ecranDuBas.value = donneeEcranDuBas.join('');
+        /** Pour les nombres */
+        donneeEcranDuHaut = [...resultats]
+
+        donneeEcranDuHaut.push(signe)
+
+        ecranDuHaut.value = donneeEcranDuHaut.join('')
+
+        resultats = []
+
     }
 }
 
+
+/* Efface toutes les données enregistrées existantes du programme */
 function reset() {
-    donneeEcranDuHaut = [];
-    donneeEcranDuBas = [];
-    resultats = [];
+    
+    donneeEcranDuHaut = []
+
+    currentInput = []
+
+    resultats = [] 
+
     ecrans.forEach(element => {
-        element.value = "";
-    })
-}
 
+        element.value = "" 
+
+    })
+} 
+
+/* Recupere les nombres pour les afficher dans l'ecran du bas */
 numeros.forEach(element => {
-    element.addEventListener('click', function() {
-       let number =  +element.innerHTML;
-       recupInput(number);
-        console.log(number); 
-    })
-});
 
+    element.addEventListener('click', function() {
+
+    let number = element.innerHTML === '.' ? '.' : +element.innerHTML // String => Number
+
+    currentInput.push(number)
+
+    ecranDuBas.value = currentInput.join('')
+
+    })
+}) 
+
+/* Recupere les operateurs pour les afficher sauf  "="*/
 signes.forEach(element => {
-    element.addEventListener('click', function() {
-       let signe = element.innerHTML;
-       recupInput(signe);
-        console.log(signe); 
-    })
-});
 
+    element.addEventListener('click', function() {
+
+       let signe = element.innerHTML  //Operateur cliqué
+
+       if(signe !== "=") { ecranDuBas.value = signe } 
+
+        recupInput(currentInput, signe)
+
+        currentInput = [] 
+    })
+}) 
+
+/** Fait appel a reset */
 effacer.addEventListener('click', function() {
-    reset();
-    console.log('AC')
+
+    reset() 
+
 })
