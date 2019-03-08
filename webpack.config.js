@@ -1,5 +1,4 @@
 const path = require('path');
-const uglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const dev = process.env.NODE_ENV === "dev";
 
 
@@ -14,16 +13,22 @@ const dev = process.env.NODE_ENV === "dev";
   },
   module: {
     rules: [
-
+      {
+        test: /\.(js|jsx)$/,
+        use: 'babel-loader',
+        exclude: /node_modules/
+      }
     ]
   },
-  plugins: [
-
-  ]
+  resolve: {
+    extensions: [
+      '.js',
+      '.jsx'
+    ]
+  },
+  devServer: {
+    contentBase: './dist'
+  }
 };
-
-if(!dev) {
-  config.plugins.push(new uglifyJSPlugin())
-}
 
 module.exports = config;

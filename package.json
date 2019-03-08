@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "webpack",
+    "babel-build": "babel src -d lib",
     "scss-watch": "sass --watch src/main.scss dist/main.css",
     "prod": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,16 +21,17 @@
   },
   "homepage": "https://github.com/wallas938/calculatrice#readme",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "babel-cli": "^6.26.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "babel-preset-env": "^1.7.0",
-    "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.29.5",
+    "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   }
 }
