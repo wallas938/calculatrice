@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Calculatrice from '../js/composants/calculatrice'
+import Calculatrice from '../js/composants/Calculatrice/calculatrice'
+import '../src/main.scss'
 
-ReactDOM.render(<Calculatrice />, document.getElementById('calculatrice'))
+ReactDOM.render(<Calculatrice />, document.getElementById('my-app'))

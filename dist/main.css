@@ -1,4 +1,4 @@
-#my-app {
+#calculatrice {
   border: 1px solid black;
   height: 100px;
   width: 40%;
@@ -12,6 +12,7 @@
   text-align: center;
   padding-top: 20px;
 }
+
 #block-boutons-operators #plus, #block-boutons-operators #moins, #block-boutons-operators #mutiplier, #block-boutons-operators #diviser, #block-boutons-operators #egale {
   width: 80px;
 }
