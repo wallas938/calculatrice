@@ -1,10 +1,10 @@
 import React from 'react';
-
+import './EcranDuBas.css'
 export default function EcranDuBas (props)  {
 
         return (
-            <label htmlFor="bottom-displayer">
-                Ecran du bas<input id="bottom-displayer" className="displayers" name="lower-dislayer" type="text" value="" />
+            <label htmlFor="ecran-inf">
+                <input id="ecran-inf" name="ecran-inf" type="text" value="226 + 13" readOnly/>
             </label>
         )
 }

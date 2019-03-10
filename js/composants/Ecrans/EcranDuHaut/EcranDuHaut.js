@@ -1,10 +1,10 @@
-import React from 'react';
-
+import React from 'react'
+import './EcranDuHaut.css'
 export default function EcranDuHaut (props)  {
 
         return (
-            <label htmlFor="top-displayer">
-                Ecran du haut<input id="top-displayer" className="displayers" name="upper-dislayer" type="text" value="" />
+            <label htmlFor="ecran-sup">
+                <input id="ecran-sup" name="ecran-sup" type="text" value="400" readOnly/>
             </label>
         )
 }

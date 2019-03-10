@@ -1,6 +1,7 @@
 import React from 'react'
 import Ecrans from '../Ecrans/Ecrans'
 import PaveNumerique from '../PaveNumerique/PaveNumerique'
+import './Calculatrice.css'
 
 export default class Calculatrice extends React.Component {
     constructor(props) {

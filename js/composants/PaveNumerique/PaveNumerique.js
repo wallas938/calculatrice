@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React from 'react'
+import './PaveNumerique.css'
 export default function PaveNumerique (props)  {
 
         return (
@@ -22,7 +22,7 @@ export default function PaveNumerique (props)  {
                     <td value="4" id="quatre" className="number">4</td>
                     <td value="5" id="cinq" className="number">5</td>
                     <td value="6" id="six" className="number">6</td>
-                    <td rowSpan="3" className="signe">=</td>
+                    <td rowSpan="3" value="=" className="signe">=</td>
                 </tr>
                 <tr>
                     <td value="1" id="un" className="number">1</td>

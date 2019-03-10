@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./js/composants/Calculatrice/Calculatrice.css":
+/*!*****************************************************!*\
+  !*** ./js/composants/Calculatrice/Calculatrice.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./Calculatrice.css */ \"./node_modules/css-loader/dist/cjs.js!./js/composants/Calculatrice/Calculatrice.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./js/composants/Calculatrice/Calculatrice.css?");
+
+/***/ }),
+
 /***/ "./js/composants/Calculatrice/calculatrice.js":
 /*!****************************************************!*\
   !*** ./js/composants/Calculatrice/calculatrice.js ***!
@@ -94,7 +105,18 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Calculatrice; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Ecrans_Ecrans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Ecrans/Ecrans */ \"./js/composants/Ecrans/Ecrans.js\");\n/* harmony import */ var _PaveNumerique_PaveNumerique__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../PaveNumerique/PaveNumerique */ \"./js/composants/PaveNumerique/PaveNumerique.js\");\n\n\n\nclass Calculatrice extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  constructor(props) {\n    super(props);\n  }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      id: \"calculatrice\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ecrans_Ecrans__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PaveNumerique_PaveNumerique__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n  }\n\n}\n\n//# sourceURL=webpack:///./js/composants/Calculatrice/calculatrice.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Calculatrice; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Ecrans_Ecrans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Ecrans/Ecrans */ \"./js/composants/Ecrans/Ecrans.js\");\n/* harmony import */ var _PaveNumerique_PaveNumerique__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../PaveNumerique/PaveNumerique */ \"./js/composants/PaveNumerique/PaveNumerique.js\");\n/* harmony import */ var _Calculatrice_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Calculatrice.css */ \"./js/composants/Calculatrice/Calculatrice.css\");\n/* harmony import */ var _Calculatrice_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Calculatrice_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nclass Calculatrice extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  constructor(props) {\n    super(props);\n  }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      id: \"calculatrice\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ecrans_Ecrans__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PaveNumerique_PaveNumerique__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n  }\n\n}\n\n//# sourceURL=webpack:///./js/composants/Calculatrice/calculatrice.js?");
+
+/***/ }),
+
+/***/ "./js/composants/Ecrans/EcranDuBas/EcranDuBas.css":
+/*!********************************************************!*\
+  !*** ./js/composants/Ecrans/EcranDuBas/EcranDuBas.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./EcranDuBas.css */ \"./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/EcranDuBas/EcranDuBas.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuBas/EcranDuBas.css?");
 
 /***/ }),
 
@@ -106,7 +128,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return EcranDuBas; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction EcranDuBas(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"label\", {\n    htmlFor: \"bottom-displayer\"\n  }, \"Ecran du bas\", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"input\", {\n    id: \"bottom-displayer\",\n    className: \"displayers\",\n    name: \"lower-dislayer\",\n    type: \"text\",\n    value: \"\"\n  }));\n}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuBas/EcranDuBas.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return EcranDuBas; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _EcranDuBas_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcranDuBas.css */ \"./js/composants/Ecrans/EcranDuBas/EcranDuBas.css\");\n/* harmony import */ var _EcranDuBas_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_EcranDuBas_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction EcranDuBas(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"label\", {\n    htmlFor: \"ecran-inf\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"input\", {\n    id: \"ecran-inf\",\n    name: \"ecran-inf\",\n    type: \"text\",\n    value: \"226 + 13\",\n    readOnly: true\n  }));\n}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuBas/EcranDuBas.js?");
+
+/***/ }),
+
+/***/ "./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css":
+/*!**********************************************************!*\
+  !*** ./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./EcranDuHaut.css */ \"./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css?");
 
 /***/ }),
 
@@ -118,7 +151,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return EcranDuHaut; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction EcranDuHaut(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"label\", {\n    htmlFor: \"top-displayer\"\n  }, \"Ecran du haut\", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"input\", {\n    id: \"top-displayer\",\n    className: \"displayers\",\n    name: \"upper-dislayer\",\n    type: \"text\",\n    value: \"\"\n  }));\n}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return EcranDuHaut; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _EcranDuHaut_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcranDuHaut.css */ \"./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css\");\n/* harmony import */ var _EcranDuHaut_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_EcranDuHaut_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction EcranDuHaut(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"label\", {\n    htmlFor: \"ecran-sup\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"input\", {\n    id: \"ecran-sup\",\n    name: \"ecran-sup\",\n    type: \"text\",\n    value: \"400\",\n    readOnly: true\n  }));\n}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.js?");
+
+/***/ }),
+
+/***/ "./js/composants/Ecrans/Ecrans.css":
+/*!*****************************************!*\
+  !*** ./js/composants/Ecrans/Ecrans.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./Ecrans.css */ \"./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/Ecrans.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/Ecrans.css?");
 
 /***/ }),
 
@@ -130,7 +174,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Ecrans; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _EcranDuHaut_EcranDuHaut__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcranDuHaut/EcranDuHaut */ \"./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.js\");\n/* harmony import */ var _EcranDuBas_EcranDuBas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EcranDuBas/EcranDuBas */ \"./js/composants/Ecrans/EcranDuBas/EcranDuBas.js\");\n\n\n\nfunction Ecrans(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"ecrans\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EcranDuHaut_EcranDuHaut__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EcranDuBas_EcranDuBas__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/Ecrans.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Ecrans; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _EcranDuHaut_EcranDuHaut__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcranDuHaut/EcranDuHaut */ \"./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.js\");\n/* harmony import */ var _EcranDuBas_EcranDuBas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EcranDuBas/EcranDuBas */ \"./js/composants/Ecrans/EcranDuBas/EcranDuBas.js\");\n/* harmony import */ var _Ecrans_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Ecrans.css */ \"./js/composants/Ecrans/Ecrans.css\");\n/* harmony import */ var _Ecrans_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Ecrans_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nfunction Ecrans(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"ecrans\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EcranDuHaut_EcranDuHaut__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EcranDuBas_EcranDuBas__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n}\n\n//# sourceURL=webpack:///./js/composants/Ecrans/Ecrans.js?");
+
+/***/ }),
+
+/***/ "./js/composants/PaveNumerique/PaveNumerique.css":
+/*!*******************************************************!*\
+  !*** ./js/composants/PaveNumerique/PaveNumerique.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./PaveNumerique.css */ \"./node_modules/css-loader/dist/cjs.js!./js/composants/PaveNumerique/PaveNumerique.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./js/composants/PaveNumerique/PaveNumerique.css?");
 
 /***/ }),
 
@@ -142,18 +197,62 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return PaveNumerique; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction PaveNumerique(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"table\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tbody\", {\n    id: \"button-numbers\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"supp\",\n    id: \"supp\"\n  }, \"AC\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"/\",\n    id: \"diviser\",\n    className: \"signe\"\n  }, \"\\xF7\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"*\",\n    id: \"mutiplier\",\n    className: \"signe\"\n  }, \"*\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"-\",\n    id: \"soustraire\",\n    className: \"signe\"\n  }, \"-\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"7\",\n    id: \"sept\",\n    className: \"number\"\n  }, \"7\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"8\",\n    id: \"huit\",\n    className: \"number\"\n  }, \"8\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"9\",\n    id: \"neuf\",\n    className: \"number\"\n  }, \"9\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"+\",\n    id: \"plus\",\n    className: \"signe\"\n  }, \"+\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"4\",\n    id: \"quatre\",\n    className: \"number\"\n  }, \"4\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"5\",\n    id: \"cinq\",\n    className: \"number\"\n  }, \"5\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"6\",\n    id: \"six\",\n    className: \"number\"\n  }, \"6\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    rowSpan: \"3\",\n    className: \"signe\"\n  }, \"=\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"1\",\n    id: \"un\",\n    className: \"number\"\n  }, \"1\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"2\",\n    id: \"deux\",\n    className: \"number\"\n  }, \"2\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"3\",\n    id: \"trois\",\n    className: \"number\"\n  }, \"3\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    colSpan: \"2\",\n    value: \"0\",\n    id: \"zero\",\n    className: \"number\",\n    value: \"0\"\n  }, \"0\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \".\",\n    id: \"virgule\",\n    className: \"number\"\n  }, \".\"))));\n}\n\n//# sourceURL=webpack:///./js/composants/PaveNumerique/PaveNumerique.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return PaveNumerique; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _PaveNumerique_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaveNumerique.css */ \"./js/composants/PaveNumerique/PaveNumerique.css\");\n/* harmony import */ var _PaveNumerique_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_PaveNumerique_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction PaveNumerique(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"table\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tbody\", {\n    id: \"button-numbers\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"supp\",\n    id: \"supp\"\n  }, \"AC\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"/\",\n    id: \"diviser\",\n    className: \"signe\"\n  }, \"\\xF7\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"*\",\n    id: \"mutiplier\",\n    className: \"signe\"\n  }, \"*\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"-\",\n    id: \"soustraire\",\n    className: \"signe\"\n  }, \"-\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"7\",\n    id: \"sept\",\n    className: \"number\"\n  }, \"7\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"8\",\n    id: \"huit\",\n    className: \"number\"\n  }, \"8\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"9\",\n    id: \"neuf\",\n    className: \"number\"\n  }, \"9\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"+\",\n    id: \"plus\",\n    className: \"signe\"\n  }, \"+\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"4\",\n    id: \"quatre\",\n    className: \"number\"\n  }, \"4\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"5\",\n    id: \"cinq\",\n    className: \"number\"\n  }, \"5\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"6\",\n    id: \"six\",\n    className: \"number\"\n  }, \"6\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    rowSpan: \"3\",\n    value: \"=\",\n    className: \"signe\"\n  }, \"=\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"1\",\n    id: \"un\",\n    className: \"number\"\n  }, \"1\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"2\",\n    id: \"deux\",\n    className: \"number\"\n  }, \"2\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \"3\",\n    id: \"trois\",\n    className: \"number\"\n  }, \"3\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"tr\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    colSpan: \"2\",\n    value: \"0\",\n    id: \"zero\",\n    className: \"number\",\n    value: \"0\"\n  }, \"0\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"td\", {\n    value: \".\",\n    id: \"virgule\",\n    className: \"number\"\n  }, \".\"))));\n}\n\n//# sourceURL=webpack:///./js/composants/PaveNumerique/PaveNumerique.js?");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/main.scss":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/main.scss ***!
-  \******************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./js/composants/Calculatrice/Calculatrice.css":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./js/composants/Calculatrice/Calculatrice.css ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#calculatrice {\\n  border: 1px solid black;\\n  height: 100px;\\n  width: 40%;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: space-around; }\\n\\n#block-boutons-operators {\\n  width: 100%;\\n  text-align: center;\\n  padding-top: 20px; }\\n  #block-boutons-operators #plus, #block-boutons-operators #moins, #block-boutons-operators #mutiplier, #block-boutons-operators #diviser, #block-boutons-operators #egale {\\n    width: 80px; }\\n\\n#button-numbers {\\n  width: 100%;\\n  margin-top: 20px; }\\n  #button-numbers td {\\n    border: 1px solid black;\\n    width: 100px;\\n    height: 80px;\\n    text-align: center;\\n    background-color: #DDD; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#calculatrice {\\r\\n    width: 35%;\\r\\n\\r\\n    margin: 0 auto;\\r\\n\\r\\n    height: 45%;\\r\\n\\r\\n    display: flex;\\r\\n\\r\\n    flex-direction: column;\\r\\n\\r\\n    background-color: black;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./js/composants/Calculatrice/Calculatrice.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/EcranDuBas/EcranDuBas.css":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/EcranDuBas/EcranDuBas.css ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#ecran-inf{\\r\\n    width: 98%;\\r\\n    border: none;\\r\\n    background-color: black;\\r\\n    color: white;\\r\\n    font-size: 24px;\\r\\n    text-align: right;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuBas/EcranDuBas.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#ecran-sup{\\r\\n    width: 98%;\\r\\n    border: none;\\r\\n    background-color: black;\\r\\n    color: #ffa500;\\r\\n    font-size: 18px;\\r\\n    text-align: right;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./js/composants/Ecrans/EcranDuHaut/EcranDuHaut.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/Ecrans.css":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./js/composants/Ecrans/Ecrans.css ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#ecrans {\\r\\n    display: flex;\\r\\n\\r\\n    flex-direction: column;\\r\\n\\r\\n    justify-content: space-around;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./js/composants/Ecrans/Ecrans.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./js/composants/PaveNumerique/PaveNumerique.css":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./js/composants/PaveNumerique/PaveNumerique.css ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"table {\\r\\n  width: 98%;\\r\\n\\r\\n  margin: 5px auto;\\r\\n}\\r\\n\\r\\n#button-numbers {\\r\\n    text-align: center;\\r\\n    background-color: #DDD;\\r\\n    margin-top: 20px;\\r\\n}\\r\\n\\r\\n#block-boutons-operators #plus, #block-boutons-operators #moins, #block-boutons-operators #mutiplier, #block-boutons-operators #diviser, #block-boutons-operators #egale {\\r\\n    width: 80px;\\r\\n  }\\r\\n\\r\\n#button-numbers td {\\r\\n    width: 100px;\\r\\n    height: 80px;\\r\\n    text-align: center;\\r\\n  }\\r\\n\\r\\n.number {\\r\\n    color: white;\\r\\n    background-color: #4d4d4d;\\r\\n}\\r\\n\\r\\n.signe {\\r\\n  color: white;\\r\\n  background-color: #666666;\\r\\n}\\r\\n\\r\\n.signe[value='='] {\\r\\n  color: white;\\r\\n  background-color: #004466;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./js/composants/PaveNumerique/PaveNumerique.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -342,18 +441,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_composants_Calculatrice_calculatrice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/composants/Calculatrice/calculatrice */ \"./js/composants/Calculatrice/calculatrice.js\");\n/* harmony import */ var _src_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/main.scss */ \"./src/main.scss\");\n/* harmony import */ var _src_main_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_main_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_js_composants_Calculatrice_calculatrice__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), document.getElementById('my-app'));\n\n//# sourceURL=webpack:///./src/main.js?");
-
-/***/ }),
-
-/***/ "./src/main.scss":
-/*!***********************!*\
-  !*** ./src/main.scss ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("\nvar content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/lib/loader.js!./main.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/main.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/main.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_composants_Calculatrice_calculatrice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/composants/Calculatrice/calculatrice */ \"./js/composants/Calculatrice/calculatrice.js\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_js_composants_Calculatrice_calculatrice__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), document.getElementById('my-app'));\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 

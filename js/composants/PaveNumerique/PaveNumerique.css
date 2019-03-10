@@ -1,0 +1,36 @@
+table {
+  width: 98%;
+
+  margin: 5px auto;
+}
+
+#button-numbers {
+    text-align: center;
+    background-color: #DDD;
+    margin-top: 20px;
+}
+
+#block-boutons-operators #plus, #block-boutons-operators #moins, #block-boutons-operators #mutiplier, #block-boutons-operators #diviser, #block-boutons-operators #egale {
+    width: 80px;
+  }
+
+#button-numbers td {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+  }
+
+.number {
+    color: white;
+    background-color: #4d4d4d;
+}
+
+.signe {
+  color: white;
+  background-color: #666666;
+}
+
+.signe[value='='] {
+  color: white;
+  background-color: #004466;
+}
