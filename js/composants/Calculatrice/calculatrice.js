@@ -2,6 +2,7 @@ import React from 'react'
 import Ecrans from '../Ecrans/Ecrans'
 import PaveNumerique from '../PaveNumerique/PaveNumerique'
 import './Calculatrice.css'
+import { isNumber } from 'util';
 
 export default class Calculatrice extends React.Component {
     constructor(props) {
@@ -34,15 +35,33 @@ export default class Calculatrice extends React.Component {
     onHandleInput(e) {
         let input = isNaN(e.target.innerHTML) ? e.target.innerHTML : +e.target.innerHTML;
         console.log(input)
-        this.setState({
-            //valeurCourante: [...this.state.valeurCourante, input]
-            valeurCourante: [...this.state.valeurCourante, input]
-        })
-        console.log(this.state.valeurCourante)
-    }
+        if(isNumber(input) || input === '.') {
+            this.setState({
+                valeurCourante: [...this.state.valeurCourante, input],
+                donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, input],
+                
+            }
+            , 
+            () => this.setState({
+                //valeurCourante: [...this.state.valeurCourante, input]
+                valeursEcranDuBas: this.state.valeurCourante.join(''),
+                valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+            }))
+        }else {
+            this.setState({
+                donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, input],
+                valeurCourante: [],
+            },
 
-    miseAjourEcransDuBas() {
-        
+            () => this.setState({
+                valeurCourante: [input],
+                valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+            }, 
+            
+            () => this.setState({
+                valeursEcranDuBas: this.state.valeurCourante.join(''),
+            })))
+        }
     }
 
     onHandleReset() {
