@@ -1,6 +1,3 @@
-import ReactDOM from 'react-dom'
-
-
 var ecrans = document.querySelectorAll('.displayers') 
 
 var ecranDuBas = document.getElementById('bottom-displayer') 

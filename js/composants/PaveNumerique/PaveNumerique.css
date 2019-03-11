@@ -4,6 +4,10 @@ table {
   margin: 5px auto;
 }
 
+table:hover {
+  cursor: pointer;
+}
+
 #button-numbers {
     text-align: center;
     background-color: #DDD;
@@ -30,7 +34,12 @@ table {
   background-color: #666666;
 }
 
-.signe[value='='] {
+.signe[key='='] {
   color: white;
   background-color: #004466;
+}
+
+#supp {
+  background-color: #E32828;
+  color: white;
 }
