@@ -1,28 +1,8 @@
-var ecrans = document.querySelectorAll('.displayers') 
 
-var ecranDuBas = document.getElementById('bottom-displayer') 
 
-var ecranDuHaut = document.getElementById('top-displayer') 
-
-var signes = document.querySelectorAll('.signe') 
-
-var numeros = document.querySelectorAll('.number') 
-
-var effacer = document.getElementById('supp') 
-
-var donneeEcranDuHaut = [] 
-
-var currentInput = [] 
-
-var resultats = []
-
-ecranDuBas.value = "" 
-
-ecranDuHaut.value = "" 
-
-function calculate() {
+export function calculate(tab) {
     let resultat = 0 
-    let finalTab = [...donneeEcranDuHaut] 
+    let finalTab = [...tab] 
 
     finalTab.pop()  // retirer le signe "="
 
@@ -57,7 +37,7 @@ function calculate() {
 }
 
 /** Traitemement des nombres et des operateurs */
-function recupInput(input, signe) {
+/*function recupInput(input, signe) {
 
     if(input && signe) {
 
@@ -104,6 +84,7 @@ function recupInput(input, signe) {
         }
     }else {
         /** Pour les nombres */
+/*
         donneeEcranDuHaut = [...resultats]
 
         donneeEcranDuHaut.push(signe)
@@ -115,8 +96,9 @@ function recupInput(input, signe) {
     }
 }
 
-
+*/
 /* Efface toutes les données enregistrées existantes du programme */
+/*
 function reset() {
     
     donneeEcranDuHaut = []
@@ -133,6 +115,7 @@ function reset() {
 } 
 
 /* Recupere les nombres pour les afficher dans l'ecran du bas */
+/*
 numeros.forEach(element => {
 
     element.addEventListener('click', function() {
@@ -147,6 +130,7 @@ numeros.forEach(element => {
 }) 
 
 /* Recupere les operateurs pour les afficher sauf  "="*/
+/*
 signes.forEach(element => {
 
     element.addEventListener('click', function() {
@@ -162,8 +146,10 @@ signes.forEach(element => {
 }) 
 
 /** Fait appel a reset */
+/*
 effacer.addEventListener('click', function() {
 
     reset() 
 
 })
+*/
