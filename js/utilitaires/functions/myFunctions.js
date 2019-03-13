@@ -3,9 +3,7 @@
 export function calculate(tab) {
     let resultat = 0 
     let finalTab = [...tab] 
-
     finalTab.pop()  // retirer le signe "="
-
     console.log(finalTab)
 
     for(let i = 0;  i <= finalTab.length; i++){
@@ -45,12 +43,19 @@ export function calculate(tab) {
             //Pour le signe egale
 
             input = +input.join('')
+
             donneeEcranDuHaut.push(input, signe)
+
             let lastResultat = calculate()
+
             resultats = [lastResultat]
+
             donneeEcranDuHaut.push(lastResultat)
+
             ecranDuHaut.value = donneeEcranDuHaut.join('')
+
             donneeEcranDuHaut = [lastResultat]
+
             ecranDuBas.value = lastResultat
 
         }else {
