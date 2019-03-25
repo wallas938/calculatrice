@@ -1,11 +1,17 @@
+import { isArray } from "util";
 
 
 export function calculate(tab) {
     let resultat = 0 
-    let finalTab = [...tab] 
-    finalTab.pop()  // retirer le signe "="
-    console.log(finalTab)
 
+    let finalTab = tab.map(elem => {
+        return isArray(elem) ? elem.join('') : elem
+    })
+
+    finalTab.pop()
+
+    console.log('Tableau des opérations: ', finalTab.join(''))
+            
     for(let i = 0;  i <= finalTab.length; i++){
 
             if(isNaN(finalTab[i])) {

@@ -12,11 +12,15 @@ export default class Calculatrice extends React.Component {
 
             valeurCourante: "0"
             ,
+            ancienneValeur: []
+            ,
             valeursEcranDuHaut: "0"
             ,
             valeursEcranDuBas:  "0"
             ,
             donneeEcranDuHaut: []
+            ,
+            operations: []
             ,
             resultats: []
         }
@@ -37,72 +41,91 @@ export default class Calculatrice extends React.Component {
     numericInputHandler(numericInput) {
         
         numericInput = numericInput !== '.' ? +numericInput : '.'
-
-        this.setState({
-            donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, numericInput],
-            valeurCourante: [...this.state.valeurCourante, numericInput], 
-        },
-
-        () => this.setState({
-            valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
-        }, 
+       
         
-        () => this.setState({
-            valeursEcranDuBas: this.state.valeurCourante.join(''),
-        })))
+        this.setState({
+            valeurCourante: [...this.state.valeurCourante, numericInput],
+            donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, numericInput]
+        }, () => {
+
+            this.setState({
+                valeursEcranDuBas: this.state.valeurCourante.join(''),
+            })
+        })
     }
 
     signeInputHandler(signeInput) {
+
         let lastInput = this.state.donneeEcranDuHaut[this.state.donneeEcranDuHaut.length - 1]
-        
+
         if(isNaN(lastInput)) {
+            const donneeEcranDuHaut = this.state.donneeEcranDuHaut
+            const operations = this.state.operations
+            donneeEcranDuHaut[this.state.donneeEcranDuHaut.length - 1] = signeInput
+            operations[this.state.operations.length - 1] = signeInput
             this.setState({
-                donneeEcranDuHaut: this.state.donneeEcranDuHaut.pop(),
-                valeurCourante: [signeInput],
-                donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, signeInput],
-                
-            }, 
-            () => this.setState({
-                valeursEcranDuBas: this.state.valeurCourante.join(''),
-                valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
-                valeurCourante: []
-            }))
-        }else {
+                donneeEcranDuHaut: donneeEcranDuHaut,
+                operations: operations,
+            }, () => {
+                this.setState({
+                    valeurCourante: [signeInput]
+                }, () => {
+                    /*console.log('Last Input', lastInput)
+                    console.log('Operations en cours: ', this.state.operations)
+                    console.log('donnee a afficher dans l\'écran du haut: ', this.state.donneeEcranDuHaut)
+                    */
+                    this.setState({
+                        valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+                        valeursEcranDuBas: this.state.valeurCourante.join(''),
+                        valeurCourante: []
+                    })
+                })
+            })
+        } else if(this.state.resultats.length === 0) {
+            console.log('Enter !!!')
             this.setState({
-                valeurCourante: [signeInput],
                 donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, signeInput],
-                
-            }, 
-            () => this.setState({
-                valeursEcranDuBas: this.state.valeurCourante.join(''),
-                valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
-            }))
+                operations: [...this.state.operations, this.state.valeurCourante, signeInput],
+                valeurCourante: [signeInput]
+            }, () => {
+                console.log(this.state.operations)
+                this.setState({
+                    valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+                    valeursEcranDuBas: this.state.valeurCourante.join(''),
+                    valeurCourante: []
+                })
+            })
         }
         
     }
 
     /** GERER LE SIGNE EGALE !!!! */
     equalInputHandler(equalInput) {
+
         this.setState({
-            valeurCourante: this.state.valeurCourante.join('')
-        },
-        () => this.setState({
+            operations: [...this.state.operations, this.state.valeurCourante, equalInput],
             donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, equalInput],
-            valeurCourante: [],
         }, 
         () => {
-
-        let resultat = calculate(this.state.donneeEcranDuHaut);
+        
+        let resultat = calculate(this.state.operations);
 
         this.setState({
+
             donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, resultat],
+            
             valeurCourante: [resultat],
+
+            operations: [resultat]
 
         }, 
         () => this.setState({
+
             valeursEcranDuBas: this.state.valeurCourante.join(''),
+            
             valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
-        }))}))
+        
+        }))})
     }
 
     onHandleInput(e) {
@@ -112,17 +135,17 @@ export default class Calculatrice extends React.Component {
         if(input === '=') {
 
             this.equalInputHandler(input)
-            console.log(input, 'equal')
+            //console.log(input, 'equal')
             
         }else if(isNaN(input) && input !== '.') {
             
             this.signeInputHandler(input)
-            console.log(input, 'signe')
+            //console.log(input, 'signe')
             
         }else {
             
             this.numericInputHandler(input)
-            console.log(input, 'number or point')
+            //console.log(input, 'number or point')
         }
     }
 
@@ -135,6 +158,8 @@ export default class Calculatrice extends React.Component {
             valeursEcranDuBas: "0"
             ,
             donneeEcranDuHaut: []
+            ,
+            operations: []
             ,
             resultats: []
         })
