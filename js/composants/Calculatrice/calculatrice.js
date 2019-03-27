@@ -22,7 +22,7 @@ export default class Calculatrice extends React.Component {
             ,
             operations: []
             ,
-            resultats: []
+            resultats: "",
         }
 
         this.onHandleInput = this.onHandleInput.bind(this)
@@ -75,28 +75,42 @@ export default class Calculatrice extends React.Component {
                     console.log('donnee a afficher dans l\'écran du haut: ', this.state.donneeEcranDuHaut)
                     */
                     this.setState({
+                        
                         valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+                        
                         valeursEcranDuBas: this.state.valeurCourante.join(''),
+                        
                         valeurCourante: []
+
                     })
+
                 })
+
             })
+
         } else if(this.state.resultats.length === 0) {
-            console.log('Enter !!!')
+
             this.setState({
+
                 donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, signeInput],
+                
                 operations: [...this.state.operations, this.state.valeurCourante, signeInput],
+                
                 valeurCourante: [signeInput]
+
             }, () => {
-                console.log(this.state.operations)
+                
                 this.setState({
+
                     valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+                    
                     valeursEcranDuBas: this.state.valeurCourante.join(''),
+                   
                     valeurCourante: []
+                    
                 })
             })
         }
-        
     }
 
     /** GERER LE SIGNE EGALE !!!! */
@@ -116,7 +130,7 @@ export default class Calculatrice extends React.Component {
             
             valeurCourante: [resultat],
 
-            operations: [resultat]
+            operations: []
 
         }, 
         () => this.setState({
@@ -124,6 +138,8 @@ export default class Calculatrice extends React.Component {
             valeursEcranDuBas: this.state.valeurCourante.join(''),
             
             valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+
+            donneeEcranDuHaut: [resultat]
         
         }))})
     }

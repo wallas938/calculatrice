@@ -10,7 +10,7 @@ export function calculate(tab) {
 
     finalTab.pop()
 
-    console.log('Tableau des opérations: ', finalTab.join(''))
+    console.log('Tableau des opérations: ', finalTab)
             
     for(let i = 0;  i <= finalTab.length; i++){
 
@@ -18,6 +18,7 @@ export function calculate(tab) {
                 continue 
                 
             }else {
+                
                 switch (finalTab[i-1]) {
                     case '+':
                         resultat += Number(finalTab[i]) 
