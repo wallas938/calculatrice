@@ -1,21 +1,25 @@
 import { isArray, isNumber } from "util";
 
 
-export function calculate(equation) { 
+/*export function calculate(equation) { 
 
-    let resultatNumerique
-    
-    while(equation.length > 0) {
-        let element = equation.shift();
+    let resultatMulti = ""
 
-        resultatNumerique += element
+    let resultatDivi = ""
+
+    let resulatFinale = ""
+
+    for(let i = 0; i < equation.length; i++) {
+
+        
+
     }
 
     return resultatNumerique
 }
+*/
 
-
-/*export function calculate(tab) {
+export function calculate(tab) {
     let resultat = 0 
 
     let finalTab = tab.map(elem => {
@@ -53,4 +57,4 @@ export function calculate(equation) {
             }
     }
     return resultat 
-}*/
+}
