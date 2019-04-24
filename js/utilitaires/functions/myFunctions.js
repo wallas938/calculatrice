@@ -1,24 +1,5 @@
 import { isArray, isNumber } from "util";
 
-
-/*export function calculate(equation) { 
-
-    let resultatMulti = ""
-
-    let resultatDivi = ""
-
-    let resulatFinale = ""
-
-    for(let i = 0; i < equation.length; i++) {
-
-        
-
-    }
-
-    return resultatNumerique
-}
-*/
-
 export function calculate(tab) {
     let resultat = 0 
 

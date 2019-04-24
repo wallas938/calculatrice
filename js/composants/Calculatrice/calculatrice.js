@@ -10,6 +10,8 @@ export default class Calculatrice extends React.Component {
         super(props)
         this.state = {
 
+            flag: false,
+
             valeurCourante: "0"
             ,
             valeursEcranDuHaut: "0"
@@ -30,11 +32,8 @@ export default class Calculatrice extends React.Component {
     }
 
     componentDidMount() {
-
         this.setState({
-
             valeurCourante: this.state.valeurCourante = []
-
         })
     }
 
@@ -88,12 +87,17 @@ export default class Calculatrice extends React.Component {
 
             })
 
-        } else {
+        } else if (signeInput === "*" || signeInput === "÷") {
 
+            let flag = this.state.flag
+
+            if(!flag) {
                 this.setState({
 
-                    operations: [...this.state.operations, this.state.valeurCourante, signeInput],
+                    operations: [...this.state.operations, "(", this.state.valeurCourante, signeInput],
                     
+                    flag: true,
+
                     donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, signeInput],
                 
                     valeurCourante: [signeInput]
@@ -109,7 +113,83 @@ export default class Calculatrice extends React.Component {
                         
                     })
                 })
+            }else {
+                this.setState({
 
+                    operations: [...this.state.operations, this.state.valeurCourante, signeInput],
+                    
+                    flag: true,
+
+                    donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, signeInput],
+                
+                    valeurCourante: [signeInput]
+                }, () => {
+                
+                    this.setState({
+    
+                        valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+                        
+                        valeursEcranDuBas: this.state.valeurCourante.join(''),
+                       
+                        valeurCourante: []
+                        
+                    })
+                })
+            }
+
+        } else {
+
+            let flag = this.state.flag
+
+            if(flag) {
+
+                this.setState({
+
+                    flag: false,
+
+                    donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, signeInput],
+                    
+                    operations: [...this.state.operations, this.state.valeurCourante, ")", signeInput],
+                    
+                    valeurCourante: [signeInput]
+    
+                }, () => {
+                    
+                    this.setState({
+    
+                        valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+                        
+                        valeursEcranDuBas: this.state.valeurCourante.join(''),
+                       
+                        valeurCourante: []
+                        
+                    })
+                })
+
+            }else {
+                this.setState({
+
+                    donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, signeInput],
+                    
+                    operations: [...this.state.operations, this.state.valeurCourante, signeInput],
+                    
+                    valeurCourante: [signeInput]
+    
+                }, () => {
+                    
+                    this.setState({
+    
+                        valeursEcranDuHaut: this.state.donneeEcranDuHaut.join(''),
+                        
+                        valeursEcranDuBas: this.state.valeurCourante.join(''),
+                       
+                        valeurCourante: []
+                        
+                    })
+                })
+            }
+
+            
         }
     }
 
@@ -120,8 +200,10 @@ export default class Calculatrice extends React.Component {
 
         this.setState({
 
-            operations: [...this.state.operations, this.state.valeurCourante],
+            operations: flag ? [...this.state.operations, this.state.valeurCourante, ")"] : [...this.state.operations, this.state.valeurCourante, ")"],
 
+            flag: false,
+            
             donneeEcranDuHaut: [...this.state.donneeEcranDuHaut, equalInput],
         }, 
         () => {
